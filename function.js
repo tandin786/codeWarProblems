@@ -32,28 +32,42 @@ function productArray(numbers) {
 
 //third function
 function sumArray(array) {
-let higest = Math.max(...array)
-let lowest = Math.min(...array)
-let sum = array.reduce((accumulator,currentValue) => accumulator+currentValue,0)
-let result = sum - higest - lowest
-return result
-
+  let higest = Math.max(...array);
+  let lowest = Math.min(...array);
+  let sum = array.reduce(
+    (accumulator, currentValue) => accumulator + currentValue,
+    0
+  );
+  let result = sum - higest - lowest;
+  return result;
 }
-console.log(sumArray([2,1,3,5,6,10,9]))
-
+console.log(sumArray([2, 1, 3, 5, 6, 10, 9]));
 
 //fourth function
 const rps = (p1, p2) => {
-  if(
-    (p1 === "scissors" &&  p2 === "paper") ||
+  if (
+    (p1 === "scissors" && p2 === "paper") ||
     (p1 === "paper" && p2 === "rock") ||
     (p1 === "rock" && p2 === "scissors")
-){
-    return "Player 1 won!"
-  }else if(p1 === p2){
-    return "Draw!"
-  }else{
-    return "Player 2 won!"
+  ) {
+    return "Player 1 won!";
+  } else if (p1 === p2) {
+    return "Draw!";
+  } else {
+    return "Player 2 won!";
   }
 };
-console.log(rps("paper", "scissors"))
+console.log(rps("paper", "scissors"));
+
+// fifth function
+
+function geometricSequenceElements(a, r, n) {
+  const result = [];
+  let answer = a;
+
+  for (let i = 0; i < n; i += 1) {
+    result.push(answer);
+    answer *= r;
+  }
+  return result.join(", ");
+}
