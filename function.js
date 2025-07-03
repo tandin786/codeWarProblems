@@ -73,11 +73,27 @@ function geometricSequenceElements(a, r, n) {
 }
 
 //sixth function
-function repeatStr (n, s) {
-  return s.repeat(n)
+function repeatStr(n, s) {
+  return s.repeat(n);
 }
-console.log(repeatStr(3, "*"))
+console.log(repeatStr(3, "*"));
 
 //seventh function
-const fakeBin = (x) => x.split('').map(num => (num >= 5 ? 1 : 0)).join('')
-console.log(fakeBin('425361982736559238'))
+const fakeBin = (x) =>
+  x
+    .split("")
+    .map((num) => (num >= 5 ? 1 : 0))
+    .join("");
+console.log(fakeBin("425361982736559238"));
+
+//Finding Remainder Without Using '%' Operator
+const remainder = (D, d) => {
+  if (D / d == parseInt(D / d)) return 0;
+  let i = 1;
+  let product = d;
+  while (D - product > d) {
+    product = d * i;
+    i++;
+  }
+  return D - product;
+};
