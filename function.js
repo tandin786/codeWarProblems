@@ -1,5 +1,5 @@
+//first function
 function findEvenIndex(arr) {
-  //first function
   if (arr.every((num) => num == 0)) return 0;
 
   for (let i = 0; i < arr.length; i += 1) {
@@ -77,3 +77,7 @@ function repeatStr (n, s) {
   return s.repeat(n)
 }
 console.log(repeatStr(3, "*"))
+
+//seventh function
+const fakeBin = (x) => x.split('').map(num => (num >= 5 ? 1 : 0)).join('')
+console.log(fakeBin('425361982736559238'))
