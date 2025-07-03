@@ -71,7 +71,7 @@ function geometricSequenceElements(a, r, n) {
   }
   return result.join(", ");
 }
-
+// sixth function
 function repeatStr (n, s) {
   return s.repeat(n)
 }
